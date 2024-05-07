@@ -189,6 +189,8 @@ def traveling_salesperson_qubo(G, lagrange=None, weight='weight', missing_edge_w
                 # above *and* below the diagonal, so we put half in each position.
                 Q[((node_1, pos), (node_2, pos))] += lagrange
 
+    print(Q)
+    
     # Objective that minimizes distance
     for u, v in itertools.combinations(G.nodes, 2):
         for pos in range(N):
